@@ -13,17 +13,20 @@ const images = [
   },
 ];
 
-const listThree = document.querySelector("ul.gallery")
+const listThree = document.querySelector("ul.gallery");
 
-const ones = Object.values(images);
-for (const one of ones) {
+listThree.style.display = "flex";
+listThree.style.flexWrap = "wrap";
+listThree.style.listStyle = "none";
 
-
-    const keys = Object.keys(one);
-
-    for (const key of keys) {
-        console.log(one[key]);
-    }
+for (const image of images) {
+    const listElement = listThree.insertAdjacentHTML("beforeend", `<li><img src="${image.url}" alt="${image.alt}"></li>`);
 }
 
-// console.log(listThree.insertAdjacentHTML("beforeend", `<img url="${}" alt="${}">`));
+const items = listThree.querySelectorAll('li')
+
+for (const item of items) {
+        item.style.marginBottom = "30px";
+    }
+
+    console.log(listThree);
