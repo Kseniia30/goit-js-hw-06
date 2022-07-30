@@ -19,14 +19,16 @@ listThree.style.display = "flex";
 listThree.style.flexWrap = "wrap";
 listThree.style.listStyle = "none";
 
-for (const image of images) {
-    const listElement = listThree.insertAdjacentHTML("beforeend", `<li><img src="${image.url}" alt="${image.alt}"></li>`);
-}
+
+images.forEach(elem => {
+  listThree.insertAdjacentHTML("beforeend", `<li><img src="${elem.url}" alt="${elem.alt}"></li>`)
+})
 
 const items = listThree.querySelectorAll('li')
 
 for (const item of items) {
-        item.style.marginBottom = "30px";
+  item.style.marginBottom = "30px";
     }
 
-    console.log(listThree);
+console.log(listThree);
+    

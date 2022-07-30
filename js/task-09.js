@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const widget = document.querySelector(".widget");
 const colorForm = document.querySelector(".color");
 const btn = document.querySelector(".change-color");
@@ -8,7 +9,8 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 function changeColor(event) {
-    colorForm.style.backgroundColor = getRandomHexColor();
+  body.style.backgroundColor = getRandomHexColor();
+  colorForm.textContent = getRandomHexColor()
 }
 
 btn.addEventListener('click', changeColor)
