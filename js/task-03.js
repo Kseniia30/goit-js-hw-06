@@ -19,10 +19,10 @@ listThree.style.display = "flex";
 listThree.style.flexWrap = "wrap";
 listThree.style.listStyle = "none";
 
-
-images.forEach(elem => {
-  listThree.insertAdjacentHTML("beforeend", `<li><img src="${elem.url}" alt="${elem.alt}"></li>`)
+const imageList = images.map(image => {
+  return `<li><img src="${image.url}" alt="${image.alt}"></li>`
 })
+listThree.insertAdjacentHTML("beforeend", imageList)
 
 const items = listThree.querySelectorAll('li')
 

@@ -7,3 +7,4 @@ const elem = document.querySelectorAll("#categories>li")
 elem.forEach(el => {
     console.log(`Category: ${el.firstElementChild.textContent}, Elements: ${el.lastElementChild.children.length}`);
 })
+

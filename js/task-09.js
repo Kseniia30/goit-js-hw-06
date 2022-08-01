@@ -10,7 +10,8 @@ function getRandomHexColor() {
 }
 function changeColor(event) {
   body.style.backgroundColor = getRandomHexColor();
-  colorForm.textContent = getRandomHexColor()
+  colorForm.textContent = body.style.backgroundColor
+
 }
 
 btn.addEventListener('click', changeColor)
